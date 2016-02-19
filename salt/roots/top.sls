@@ -10,4 +10,5 @@ base:
     - folders
     - database
     - npm
+    - mailcatcher
     - cleanup

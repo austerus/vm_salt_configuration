@@ -45,7 +45,7 @@ php5-mysql:
   pkg:
     - installed
 
-php5-xhprof
+php5-xhprof:
   pkg:
     - installed
 
