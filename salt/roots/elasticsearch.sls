@@ -9,6 +9,15 @@ elasticsearch:
     - enable: true
     - watch:
       - pkg: elasticsearch
+      - file: /etc/elasticsearch/elasticsearch.yml
+
+/etc/elasticsearch/elasticsearch.yml:
+  file.managed:
+    - source: salt://elasticsearch.yml
+    - user: root
+    - group: root
+    - mode: 644
+    - makedirs: true
 
 /tmp/foodpanda-extension-3.4.0.jar:
   file.managed:
