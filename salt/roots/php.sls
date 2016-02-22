@@ -12,6 +12,7 @@ php5-fpm:
       - pkg: php5-fpm
       - file: /etc/php5/fpm/php.ini
       - file: /etc/php5/fpm/pool.d/www.conf
+      - file: /etc/php5/mods-available/xdebug.ini
 
 /etc/php5/fpm/pool.d/www.conf:
   file.managed:
@@ -24,6 +25,22 @@ php5-fpm:
 /etc/php5/fpm/php.ini:
   file.managed:
     - source: salt://files/php.ini
+    - user: root
+    - group: root
+    - mode: 644
+    - makedirs: true
+
+/home/vagrant/.bashrc:
+  file.managed:
+    - source: salt://files/bashrc
+    - user: vagrant
+    - group: vagrant
+    - mode: 744
+    - makedirs: true
+
+/etc/php5/mods-available/xdebug.ini:
+  file.managed:
+    - source: salt://files/xdebug.ini
     - user: root
     - group: root
     - mode: 644

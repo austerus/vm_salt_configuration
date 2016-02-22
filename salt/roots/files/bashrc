@@ -1,0 +1,5 @@
+#/bin/bash
+
+export COUNTRY_CODE=de
+export SYMFONY_EV=dev
+export PLATFORM=foodora
