@@ -39,3 +39,11 @@ ruby2.2:
 
 ruby2.2-dev:
   pkg.installed
+
+/tmp/hosts.tmp:
+  file.managed:
+    - source: salt://files/foodora_hosts.tmp
+    - user: vagrant
+    - group: vagrant
+    - mode: 644
+    - makedirs: true
