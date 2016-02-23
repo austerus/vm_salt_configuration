@@ -13,12 +13,6 @@ nginx:
       - file: /etc/nginx/ssl/server.pem
       - file: /etc/nginx/ssl/server.key
 
-vagrant:
-  group.present:
-    - addusers:
-      - www-data
-      - nginx
-
 /etc/nginx/nginx.conf:
   file.managed:
     - source: salt://files/nginx.conf

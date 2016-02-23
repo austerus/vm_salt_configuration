@@ -6,6 +6,18 @@
     - mode: 774
     - makedirs: true
 
+vagrant:
+  user.present:
+    - groups:
+      - www-data
+      - nginx
+
+www-data:
+  user.present:
+    - groups:
+      - vagrant
+      - nginx
+
 clean-unused-kernels:
   cmd.run:
     - names:

@@ -1,5 +1,7 @@
 
 # foodora
-127.0.0.1 au.foodora.dev de.foodora.dev ae.foodora.dev hk.foodora.dev ca.foodor$
-127.0.0.1 back.fp de.back.fp
-127.0.0.1 front.fp de.front.fp ca.front.fp
+127.0.0.1 au.foodora.dev au.back.fp au.front.fp
+127.0.0.1 de.foodora.dev de.back.fp de.front.fp
+127.0.0.1 ae.foodora.dev ae.back.fp ae.front.fp
+127.0.0.1 hk.foodora.dev hk.back.fp hk.front.fp
+127.0.0.1 ca.foodora.dev ca.back.fp ca.front.fp

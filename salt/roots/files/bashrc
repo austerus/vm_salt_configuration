@@ -3,3 +3,25 @@
 export COUNTRY_CODE=de
 export SYMFONY_EV=dev
 export PLATFORM=foodora
+
+sudo rm -rf /dev/shm/symfony_cache
+
+sudo rm -rf /vagrant/fp-api/app/api/cache
+sudo rm -rf /vagrant/fp-api/app/api/logs 
+sudo rm -rf /vagrant/pfm-consumer-frontend/app/cache 
+sudo rm -rf /vagrant/pfm-consumer-frontend/app/logs 
+
+mkdir /dev/shm/symfony_cache
+
+mkdir /dev/shm/symfony_cache/api-cache
+mkdir /dev/shm/symfony_cache/api-logs
+mkdir /dev/shm/symfony_cache/fe-cache
+mkdir /dev/shm/symfony_cache/fe-logs
+
+sudo ln -s /dev/shm/symfony_cache/api-cache /vagrant/fp-api/app/api/cache 
+sudo ln -s /dev/shm/symfony_cache/api-logs /vagrant/fp-api/app/api/logs 
+
+sudo ln -s /dev/shm/symfony_cache/fe-cache /vagrant/pfm-consumer-frontend/app/cache 
+sudo ln -s /dev/shm/symfony_cache/fe-logs /vagrant/pfm-consumer-frontend/app/logs 
+
+sudo chmod -R 777 /dev/shm/symfony_cache
