@@ -22,6 +22,9 @@ mysql:
 staging_de:
   mysql_database.present
 
+test_va:
+  mysql_database.present
+
 /etc/mysql/my.cnf:
   file.managed:
     - source: salt://files/my.cnf

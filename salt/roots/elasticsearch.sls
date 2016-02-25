@@ -13,7 +13,7 @@ elasticsearch:
 
 /etc/elasticsearch/elasticsearch.yml:
   file.managed:
-    - source: salt://elasticsearch.yml
+    - source: salt://files/elasticsearch.yml
     - user: root
     - group: root
     - mode: 644
