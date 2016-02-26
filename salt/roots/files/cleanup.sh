@@ -4,8 +4,6 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 
 sudo gem install sass -v '~> 3.4.13'
 
-source /home/vagrant/.bashrc
-
 sudo bash -c 'cat /tmp/hosts.tmp >> /etc/hosts'
 
 cd ~
@@ -23,5 +21,6 @@ sudo chown -R root:root /etc/php5/mods-available/twig.ini
 sudo ln -s /etc/php5/mods-available/twig.ini /etc/php5/fpm/conf.d/20-twig.ini
 sudo rm -rf ~/Twig
 
+sudo apt-get -y autoremove
 sudo service php5-fpm restart
 sudo service nginx restart
