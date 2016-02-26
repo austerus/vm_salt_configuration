@@ -6,7 +6,7 @@ sudo gem install sass -v '~> 3.4.13'
 
 source /home/vagrant/.bashrc
 
-sudo cat /tmp/hosts.tmp >> /etc/hosts
+sudo bash -c 'cat /tmp/hosts.tmp >> /etc/hosts'
 
 cd ~
 git clone git://github.com/twigphp/Twig.git
@@ -18,7 +18,8 @@ sudo make install
 
 cd ~
 echo "extension=twig.so" >> twig.ini
-sudo mv twig.ini /etc/php5/mods-available/
+sudo mv ~/twig.ini /etc/php5/mods-available/
+sudo chown -R root:root /etc/php5/mods-available/twig.ini
 sudo ln -s /etc/php5/mods-available/twig.ini /etc/php5/fpm/conf.d/20-twig.ini
 sudo rm -rf ~/Twig
 

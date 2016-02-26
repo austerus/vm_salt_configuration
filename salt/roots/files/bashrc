@@ -13,9 +13,9 @@ sudo rm -rf /vagrant/pfm-consumer-frontend/app/logs
 
 mkdir /dev/shm/symfony_cache
 
-chmod g+s /dev/shm/symfony_cache  //set gid 
-setfacl -d -m g::rwx /dev/shm/symfony_cache  //set group to rwx default 
-setfacl -d -m o::rx /dev/shm/symfony_cache   //set other
+chmod g+s /dev/shm/symfony_cache
+setfacl -d -m g::rwx /dev/shm/symfony_cache
+setfacl -d -m o::rx /dev/shm/symfony_cache
 
 mkdir /dev/shm/symfony_cache/api-cache
 mkdir /dev/shm/symfony_cache/api-logs

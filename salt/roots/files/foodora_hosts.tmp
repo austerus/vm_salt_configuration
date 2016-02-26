@@ -1,5 +1,6 @@
 
 # foodora
+127.0.0.1 localhost
 127.0.0.1 au.foodora.dev au.back.fp au.front.fp
 127.0.0.1 de.foodora.dev de.back.fp de.front.fp
 127.0.0.1 ae.foodora.dev ae.back.fp ae.front.fp
